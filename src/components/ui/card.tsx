@@ -24,7 +24,10 @@ function Card({ title, fileName, url, category }: Company) {
         <div className="absolute inset-0 bg-primary bg-opacity-50 opacity-0 group-hover:opacity-100 flex justify-center items-center rounded-lg">
           <div className="flex flex-col">
             {logoDownloadFormats.map((downloadFormat, index) => (
-              <Button key={index} className="flex items-center space-x-2">
+              <Button
+                key={index}
+                className="flex items-center space-x-2 space-y-3 hover:text-purple"
+              >
                 <DownloadIcon />
                 <span>{downloadFormat}</span>
               </Button>
@@ -34,7 +37,10 @@ function Card({ title, fileName, url, category }: Company) {
       </div>
 
       <div className="p-2">
-        <Link href={url} className="font-grotesk font-semibold hover:underline">
+        <Link
+          href={url}
+          className="font-grotesk font-semibold hover:underline hover:text-purple hover:font-bold"
+        >
           {title}
         </Link>
         <p>{transformString(category.join(", "), "original")}</p>
