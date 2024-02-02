@@ -1,4 +1,6 @@
+import { DropdownOptions } from "@/Types";
 import categories from "@/constants/categories";
+import { transformString } from ".";
 
 // Function to create label-value pairs for dropdown options
 export const createDropdownOptions = (): { label: string; value: string }[] => {
@@ -6,10 +8,9 @@ export const createDropdownOptions = (): { label: string; value: string }[] => {
 
   // Iterate over each category and create label-value pair
   categories.forEach((category) => {
-    const formattedValue = category.toLowerCase().replace(/\s+/g, "-");
     categoryOptions.push({
       label: category,
-      value: formattedValue,
+      value: transformString(category, "lowercase"),
     });
   });
 

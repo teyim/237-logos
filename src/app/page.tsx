@@ -1,4 +1,5 @@
-import Header from "@/components/seactions/Header";
+import Cards from "@/components/sections/Cards";
+import Header from "@/components/sections/Header";
 import { createDropdownOptions } from "@/helpers/category";
 import { promises as fs } from "fs";
 
@@ -7,18 +8,19 @@ export default async function Home() {
   const categories = createDropdownOptions();
 
   // load json file
-  const logoFileData = await fs.readFile(
+  const companyData = await fs.readFile(
     process.cwd() + "/src/data/logos.json",
     "utf8"
   );
 
   // parse json to array of objects
-  const logos = JSON.parse(logoFileData);
+  const modifiedCompanyData = JSON.parse(companyData);
 
   return (
     <main className="container">
       <Header />
       <hr className="border-2" />
+      <Cards data={modifiedCompanyData} />
     </main>
   );
 }

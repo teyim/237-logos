@@ -29,7 +29,7 @@ export default function RootLayout({
       className={`${inter.variable} ${space_grotesk.variable}`}
       suppressHydrationWarning
     >
-      <body className={cn("gridBackground")}>
+      <body className={cn("gridBackground absolute")}>
         <Navbar />
         <div className="container">{children}</div>
       </body>

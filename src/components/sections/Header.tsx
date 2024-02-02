@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 function Header() {
   return (
     <section className="text-center py-[60px]">
-      <div className="w-[60%] mx-auto leading-relaxed">
+      <div className="md:w-[60%] mx-auto leading-relaxed">
         <h2 className="font-grotesk font-semibold">
           <strong className="text-purple">237 Logos</strong>, an open source
           collection of high quality, optimised logos of Cameroonian{" "}
