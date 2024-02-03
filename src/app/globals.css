@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-family: var(--font-inter);
+  }
+
   h1 {
     @apply text-4xl;
   }
