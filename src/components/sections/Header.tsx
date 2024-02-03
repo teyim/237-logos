@@ -7,7 +7,7 @@ function Header() {
       <div className="md:w-[60%] mx-auto leading-relaxed">
         <h1 className="font-grotesk font-bold">
           <strong className="text-purple">237 Logos</strong>, an open source
-          collection of high quality, optimised logos of Cameroonian{" "}
+          collection of high quality, optimised logos of Cameroonian companies
         </h1>
 
         <h4 className="my-4">
