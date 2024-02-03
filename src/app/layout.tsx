@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { cn } from "@/lib/utils";
 import { SearchProvider } from "@/context/searchContext";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,6 +35,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className={cn("gridBackground absolute")}>
+        <ToastContainer />
         <SearchProvider>
           <Navbar />
           <div className="container">{children}</div>
