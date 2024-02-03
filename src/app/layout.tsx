@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { cn } from "@/lib/utils";
+import { SearchProvider } from "@/context/searchContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,8 +33,10 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className={cn("gridBackground absolute")}>
-        <Navbar />
-        <div className="container">{children}</div>
+        <SearchProvider>
+          <Navbar />
+          <div className="container">{children}</div>
+        </SearchProvider>
       </body>
     </html>
   );
