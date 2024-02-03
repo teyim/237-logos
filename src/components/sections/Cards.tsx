@@ -21,9 +21,14 @@ function Cards({ data }: CardsProps) {
     company.title.toLowerCase().includes(searchValue.toLowerCase())
   );
 
+  // sort companies in alpahbetic order based on name
+  const sortedCompanies = searchedCompanies
+    ?.slice()
+    .sort((a, b) => a.title.localeCompare(b.title));
+
   return (
     <div className="relative grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-8 py-10">
-      {searchedCompanies?.map((companyData, index: number) => (
+      {sortedCompanies?.map((companyData, index: number) => (
         <Card
           key={index}
           title={companyData.title}
