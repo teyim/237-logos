@@ -13,3 +13,8 @@ export type Company = {
 };
 
 export type CaseTransformation = "lowercase" | "original";
+
+export enum ImageFormats {
+  PNG = "png",
+  SVG = "svg",
+}
