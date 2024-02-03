@@ -12,6 +12,4 @@ export type Company = {
   category: string[];
 };
 
-export type Companies = Company[];
-
 export type CaseTransformation = "lowercase" | "original";
