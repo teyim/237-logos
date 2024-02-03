@@ -5,17 +5,19 @@ function Header() {
   return (
     <section className="text-center py-[60px]">
       <div className="md:w-[60%] mx-auto leading-relaxed">
-        <h2 className="font-grotesk font-semibold">
+        <h1 className="font-grotesk font-bold">
           <strong className="text-purple">237 Logos</strong>, an open source
           collection of high quality, optimised logos of Cameroonian{" "}
-        </h2>
+        </h1>
 
         <h4 className="my-4">
           Search and download logos in <strong>PNG</strong> and{" "}
           <strong>SVG</strong> formats
         </h4>
         <div className=" ">
-          <Button size="lg">Contribute on Github</Button>
+          <Button size="lg" className="font-grotesk">
+            Contribute on Github
+          </Button>
         </div>
       </div>
     </section>
