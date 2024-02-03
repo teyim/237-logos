@@ -37,7 +37,7 @@ function Navbar() {
         <Searchbox />
       </div>
       <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-        <Link href="">
+        <Link href="https://github.com/teyim/237-logos" prefetch={false}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
