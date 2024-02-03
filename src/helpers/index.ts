@@ -1,4 +1,5 @@
-import { CaseTransformation, ImageFormats } from "@/Types";
+import { CaseTransformation, Company, ImageFormats } from "@/Types";
+import { createDropdownOptions } from "./category";
 
 export const transformString = (
   value: string,
@@ -15,10 +16,25 @@ export const transformString = (
   }
 };
 
+// Download image based on selected format and company name
 export const downloadImage = (selectedFormat: string, companyName: string) => {
   const imageUrl = `/logos/${companyName}/${companyName}.${selectedFormat.toLocaleLowerCase()}`;
   const link = document.createElement("a");
   link.href = imageUrl;
   link.download = `${companyName}.${selectedFormat.toLocaleLowerCase()}`;
   link.click();
+};
+
+// returns filter companies based on category
+export const filterCompaniesByCategory = (
+  companies: Company[] | undefined,
+  category: string
+) => {
+  const comapanyCategories = createDropdownOptions();
+  if (companies) {
+    if (category === comapanyCategories[0].value) {
+      return companies;
+    }
+    return companies.filter((company) => company.category.includes(category));
+  }
 };

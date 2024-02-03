@@ -3,22 +3,27 @@ import React from "react";
 import Card from "../ui/card";
 import { Company } from "@/Types";
 import { useSearchContext } from "@/context/searchContext";
+import { createDropdownOptions } from "@/helpers/category";
+import { filterCompaniesByCategory } from "@/helpers";
 
 type CardsProps = {
   data: Company[] | undefined;
 };
 
 function Cards({ data }: CardsProps) {
-  const { searchValue } = useSearchContext();
+  const { searchValue, filterCategory } = useSearchContext();
 
-  // filter companies based on search value
-  const filteredCompanies = data?.filter((company) =>
+  // search companies based on search value
+  const searchedCompanies = filterCompaniesByCategory(
+    data,
+    filterCategory
+  )?.filter((company) =>
     company.title.toLowerCase().includes(searchValue.toLowerCase())
   );
 
   return (
     <div className="relative grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-8 py-10">
-      {filteredCompanies?.map((companyData, index: number) => (
+      {searchedCompanies?.map((companyData, index: number) => (
         <Card
           key={index}
           title={companyData.title}
