@@ -20,11 +20,11 @@ export const transformString = (
 };
 
 // Download image based on selected format and company name
-export const downloadImage = (selectedFormat: string, companyName: string) => {
-  const imageUrl = `/logos/${companyName}/${companyName}.${selectedFormat.toLocaleLowerCase()}`;
+export const downloadImage = (selectedFormat: string, fileName: string) => {
+  const imageUrl = `/logos/${fileName}/${fileName}.${selectedFormat.toLocaleLowerCase()}`;
   const link = document.createElement("a");
   link.href = imageUrl;
-  link.download = `${companyName}.${selectedFormat.toLocaleLowerCase()}`;
+  link.download = `${fileName}.${selectedFormat.toLocaleLowerCase()}`;
   link.click();
 };
 

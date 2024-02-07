@@ -42,7 +42,7 @@ function Card({ title, fileName, url, category }: Company) {
                 key={index}
                 className="flex items-center space-x-2 space-y-3 hover:text-purple"
                 onClick={() => {
-                  downloadImage(imageFormat, title.toLowerCase());
+                  downloadImage(imageFormat, fileName);
                   showToast();
                 }}
               >
