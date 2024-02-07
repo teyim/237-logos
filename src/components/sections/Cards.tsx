@@ -34,7 +34,7 @@ function Cards({ data }: CardsProps) {
       {noCompanyFound ? (
         <Empty />
       ) : (
-        <div className="relative grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-8 py-10">
+        <div className="relative grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-8 py-12">
           {sortedCompanies?.map((companyData, index: number) => (
             <Card
               key={index}

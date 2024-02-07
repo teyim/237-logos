@@ -10,5 +10,101 @@
     "fileName": "upowa",
     "url": "https://www.upowa.energy/",
     "category": ["energy"]
+  },
+  {
+    "title": "Diool",
+    "fileName": "diool",
+    "url": "https://www.diool.com/",
+    "category": ["financial-services", "startups"]
+  },
+  {
+    "title": "Cimencam",
+    "fileName": "cimencam",
+    "url": "https://www.cimencam.com/fr",
+    "category": ["government", "construction"]
+  },
+  {
+    "title": "Gulfcam",
+    "fileName": "gulfcam",
+    "url": "https://gulfcamsas.com/",
+    "category": ["oil-and-gas"]
+  },
+  {
+    "title": "Waspito",
+    "fileName": "waspito",
+    "url": "https://www.waspito.com/",
+    "category": ["healthcare", "startups"]
+  },
+  {
+    "title": "Kiro'o Games",
+    "fileName": "kiro",
+    "url": "https://kirooworld.com/",
+    "category": ["media-and-entertainment"]
+  },
+  {
+    "title": "Taaply",
+    "fileName": "taaply",
+    "url": "https://taaply.com/",
+    "category": ["financial-services", "startups"]
+  },
+  {
+    "title": "Fresh Bag",
+    "fileName": "freshbag",
+    "url": "https://freshbag.shop/",
+    "category": ["agritech", "startups"]
+  },
+  {
+    "title": "Fiatope",
+    "fileName": "fiatope",
+    "url": "https://www.fiatope.com/?locale=en",
+    "category": ["consulting"]
+  },
+  {
+    "title": "Afriland Bank",
+    "fileName": "afriland",
+    "url": "https://www.afrilandfirstbank.com/?lang=en",
+    "category": ["banking"]
+  },
+  {
+    "title": "Brasseries du Cameroun",
+    "fileName": "brasseries",
+    "url": "https://www.boissonsducameroun.com/fr",
+    "category": ["food-and-beverage", "manufacturing"]
+  },
+  {
+    "title": "Camair-co",
+    "fileName": "camair-co",
+    "url": "https://www.camair-co.cm/",
+    "category": ["travel", "transportation"]
+  },
+  {
+    "title": "CDC",
+    "fileName": "cdc",
+    "url": "https://www.cdc-cameroon.com/index.html",
+    "category": ["government", "agriculture"]
+  },
+  {
+    "title": "Campost",
+    "fileName": "campost",
+    "url": "https://www.minpostel.gov.cm/index.php/fr/actualites/315-campost-le-plan-de-restructuration-devoile",
+    "category": ["government", "logistics"]
+  },
+  {
+    "title": "Camtel",
+    "fileName": "camtel",
+    "url": "https://camtel.cm/",
+    "category": ["government", "telecommunications"]
+  },
+  {
+    "title": "Orange",
+    "fileName": "orange",
+    "url": "https://www.orange.cm/",
+    "category": ["telecommunications"]
+  },
+  {
+    "title": "MTN",
+    "fileName": "mtn",
+    "url": "https://mtn.cm/",
+    "category": ["telecommunications"]
   }
 ]

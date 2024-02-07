@@ -61,7 +61,11 @@ function Card({ title, fileName, url, category }: Company) {
         >
           {title}
         </Link>
-        <p>{transformString(category.join(", "), "original")}</p>
+        <p className="text-sm">
+          {category
+            .map((category) => transformString(category, "original"))
+            .join(", ")}
+        </p>
       </div>
     </div>
   );

@@ -10,7 +10,10 @@ export const transformString = (
       return value.toLowerCase().replace(/\s+/g, "-");
     case "original":
       // Revert back to the original string (remove hyphens)
-      return value.replace(/-/g, " ");
+      // Capitalize the first letter of each word
+      return value
+        .replace(/-/g, " ")
+        .replace(/\b\w/g, (match) => match.toUpperCase());
     default:
       return value; // No transformation
   }
