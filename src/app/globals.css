@@ -95,15 +95,6 @@
 }
 
 @layer components {
-  .grid {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
-      linear-gradient(to bottom, #80808012 1px, transparent 1px);
-    background-size: 24px 24px;
-  }
   .gridBackground {
     @apply inset-0 h-full w-full bg-white bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px];
   }

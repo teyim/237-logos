@@ -36,10 +36,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${space_grotesk.variable}`}
+      className={`${inter.variable} ${space_grotesk.variable} relative`}
       suppressHydrationWarning
     >
-      <body className={cn("gridBackground absolute")}>
+      <body className={cn("gridBackground ")}>
         <ToastContainer />
         <SearchProvider>
           <Navbar />
