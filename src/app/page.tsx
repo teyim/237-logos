@@ -13,7 +13,7 @@ export default async function Home() {
   const modifiedCompanyData = JSON.parse(companyData);
 
   return (
-    <main className="container">
+    <main className="container px-1 md:px-[2rem]">
       <Header />
       <hr className="border-2" />
       <Cards data={modifiedCompanyData} />

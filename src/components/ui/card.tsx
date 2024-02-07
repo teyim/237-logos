@@ -1,11 +1,18 @@
 import { Company, ImageFormats } from "@/Types";
 import { downloadImage, transformString } from "@/helpers";
-import { DownloadIcon } from "lucide-react";
+import { ChevronDown, DownloadIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "./button";
 import { toast } from "react-toastify";
+import { cn } from "@/lib/utils";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./dropdown-menu";
 
 function Card({ title, fileName, url, category }: Company) {
   const logoDownloadFormats = Object.keys(ImageFormats);
@@ -22,8 +29,14 @@ function Card({ title, fileName, url, category }: Company) {
       theme: "light",
     });
   };
+
+  const handleDownload = (imageFormat: string, fileName: string) => {
+    downloadImage(imageFormat, fileName);
+    showToast();
+  };
+
   return (
-    <div className="w-[280px] h-[280px] ring-1 ring-ring p-2 rounded-lg ">
+    <div className="lg:w-[280px] lg:h-[280px]  w-full ring-1 ring-ring p-2 rounded-lg ">
       <div className="relative group">
         <div className="h-[180px] flex justify-center items-center ">
           <Image
@@ -35,21 +48,43 @@ function Card({ title, fileName, url, category }: Company) {
             // Adjust the height as per your design
           />
         </div>
-        <div className="absolute inset-0 bg-primary bg-opacity-50 opacity-0 group-hover:opacity-100 flex justify-center items-center rounded-lg">
-          <div className="flex flex-col">
+        <div
+          className={cn(
+            "absolute inset-0 bg-primary bg-opacity-50 opacity-0 group-hover:opacity-100 flex justify-center items-center rounded-lg"
+          )}
+        >
+          <div className="hidden lg:flex flex-col">
             {logoDownloadFormats.map((imageFormat, index) => (
               <Button
                 key={index}
                 className="flex items-center space-x-2 space-y-3 hover:text-purple"
-                onClick={() => {
-                  downloadImage(imageFormat, fileName);
-                  showToast();
-                }}
+                onClick={() => handleDownload(imageFormat, fileName)}
               >
                 <DownloadIcon />
                 <span>{imageFormat}</span>
               </Button>
             ))}
+          </div>
+
+          <div className="block lg:hidden">
+            <DropdownMenu>
+              <DropdownMenuTrigger className=" border-r outline-none flex items-center text-sm bg-white p-2">
+                Download logo
+                <span className="ml-2">
+                  <ChevronDown size={20} />
+                </span>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="h-[100px] overflow-y-scroll p-3 text-sm">
+                {logoDownloadFormats.map((format, index) => (
+                  <DropdownMenuItem
+                    key={index}
+                    onClick={() => handleDownload(format, fileName)}
+                  >
+                    {format}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
       </div>
