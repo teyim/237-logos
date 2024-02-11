@@ -33,7 +33,7 @@ function Searchbox() {
   };
 
   return (
-    <div className="flex items-center space-x-2 ring-1 ring-ring py-2  rounded-xl bg-white">
+    <div className="flex items-center lg:space-x-2 ring-1 ring-ring py-4 rounded-xl bg-white">
       <DropdownMenu>
         <DropdownMenuTrigger className="px-2 border-r outline-none flex items-center text-sm ">
           {selectedCategory.label}
@@ -58,13 +58,10 @@ function Searchbox() {
       </DropdownMenu>
       <input
         type="text"
-        className="w-80 px-3 ring-0 border-0 outline-none active:border-none"
+        className="lg:w-80 w-full px-3 ring-0 border-0 outline-none active:border-none"
         placeholder="Search Company by name"
         onChange={(results) => setSearchValue(results?.currentTarget?.value)}
       />
-      <button className="px-3 py-2 ">
-        <Search strokeWidth={1.75} />
-      </button>
     </div>
   );
 }

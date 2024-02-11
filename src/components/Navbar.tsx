@@ -57,6 +57,23 @@ function Navbar() {
       </div>
 
       {/** add mobile menu*/}
+      {mobileMenuOpen && (
+        <div className="fixed top-0 left-0 right-0 bg-black p-4 h-[170px] z-50">
+          <div className="flex justify-end">
+            {/* Close button */}
+            <button
+              type="button"
+              className=" text-white"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <XIcon className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+          <div className="w-full my-6">
+            <Searchbox />
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
