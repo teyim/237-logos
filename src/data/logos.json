@@ -106,5 +106,23 @@
     "fileName": "mtn",
     "url": "https://mtn.cm/",
     "category": ["telecommunications"]
+  },
+  {
+    "title": "CBC Bank",
+    "fileName": "cbc",
+    "url": "https://commercialbank-cm.com/",
+    "category": ["banking", "financial-services"]
+  },
+  {
+    "title": "NFC Bank",
+    "fileName": "nfc",
+    "url": "https://nfcbank.com/",
+    "category": ["banking", "financial-services"]
+  },
+  {
+    "title": "Nkwa",
+    "fileName": "nkwa",
+    "url": "/",
+    "category": ["startups", "financial-services"]
   }
 ]
