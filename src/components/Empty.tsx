@@ -9,7 +9,7 @@ function Empty() {
         <Image
           src={emptyImage}
           className="w-full h-full"
-          alt="rocket distroy "
+          alt="rocket distroy"
         />
       </div>
       <h3 className="font-grotesk font-semibold">No Company Found</h3>
