@@ -1,5 +1,6 @@
+<img src="./public/images/banner.png">
+
 <div style="text-align:center">
-  <img src="./public/logo.svg" alt="SVG Image" width="100" height="100">
   <h1>237 LOGOS</h1>
  <h3><a href="https://237-logos.vercel.app/">Live website</a></h3>
 </div>
