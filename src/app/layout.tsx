@@ -23,6 +23,17 @@ export const metadata: Metadata = {
   title: "237 Logos",
   description:
     "An open source collection of high quality, optimised logos of Cameroonian companies.Search and download logos in PNG and SVG formats",
+  keywords: [
+    "logos",
+    "cameroon",
+    "cameroun logo",
+    "camtel",
+    "mtn",
+    "orange",
+    "png",
+    "svg",
+    "237",
+  ],
   icons: {
     icon: "/icon.ico",
   },
