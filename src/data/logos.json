@@ -124,5 +124,22 @@
     "fileName": "nkwa",
     "url": "/",
     "category": ["startups", "financial-services"]
+  },
+  {
+
+    "title": "Jica",
+    "fileName": "jica",
+    "url": "/",
+    "category": ["government", "financial-services"]
+
+  },
+
+  {
+
+    "title": "Cami-Motors",
+    "fileName": "cami-motors",
+    "url": "/",
+    "category": ["transportation", "financial-services"]
+
   }
 ]
