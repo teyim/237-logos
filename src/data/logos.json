@@ -141,5 +141,42 @@
     "url": "/",
     "category": ["transportation", "financial-services"]
 
+  },
+
+  {
+
+    "title": "Padisco SH",
+    "fileName": "padisco",
+    "url": "/",
+    "category": ["Fashion", "financial-services"]
+
+  },
+
+  {
+
+    "title": "Fokou",
+    "fileName": "fokou",
+    "url": "/",
+    "category": ["transportation", "financial-services"]
+
+  },
+
+  {
+
+    "title": "utility company Électricité de France",
+    "fileName": "edf",
+    "url": "/",
+    "category": ["Energy", "financial-services"]
+
+  },
+
+  {
+
+    "title": "Cameroon-air",
+    "fileName": "cameroon-air",
+    "url": "/",
+    "category": ["transport", "financial-services"]
   }
+
+  
 ]
